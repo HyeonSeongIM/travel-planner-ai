@@ -1,13 +1,8 @@
-from fastapi import FastAPI
+import sys
+from pathlib import Path
 
-app = FastAPI()
+sys.path.insert(0, str(Path(__file__).parent / "backend"))
 
+from app.main import app  # noqa: E402
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-
-@app.get("/hello/{name}")
-async def say_hello(name: str):
-    return {"message": f"Hello {name}"}
+__all__ = ["app"]
