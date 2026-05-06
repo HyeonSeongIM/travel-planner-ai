@@ -1,7 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python *)"
+      "Bash(python *)",
+      "Bash(python3 -c \"import pytest; print\\(pytest.__version__\\)\")",
+      "Bash(python3 -c \"import pytest_asyncio; print\\(pytest_asyncio.__version__\\)\")",
+      "Bash(python3 -c \"import pytest_cov; print\\('pytest-cov ok'\\)\")",
+      "Bash(python3 -c \"import pytest_asyncio; print\\(pytest_asyncio.__version__\\); help\\(pytest_asyncio.fixture\\)\")",
+      "Bash(pip install *)",
+      "Bash(pip show *)",
+      "Bash(/Users/user/desktop/2024-2/python/roop/yes/bin/python -m pytest -q)",
+      "Bash(/Users/user/IdeaProjects/travel-planner-ai/venv/bin/python -m pytest -q)",
+      "Bash(/Users/user/IdeaProjects/travel-planner-ai/venv/bin/pip install *)",
+      "Bash(/Users/user/IdeaProjects/travel-planner-ai/venv/bin/python *)"
     ]
   }
 }
